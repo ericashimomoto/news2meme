@@ -41,7 +41,7 @@ Where you can replace `<name>` with whatever name you want.
         Meme images:
         News articles images:
 
-## Configuration
+### Configuration
 
 If you changed the download folder, make sure to change the path in settings.py
 
