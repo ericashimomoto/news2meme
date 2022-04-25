@@ -33,13 +33,13 @@ Where you can replace `<name>` with whatever name you want.
                 |-- catchphrases
                     |-- catchphrases.csv
                 |-- memeimages
+                    |-- full: Folder with the original images.
                     |-- memeImages.csv
                 |-- news
+                    |-- full: Folder with the images available with each news article.
                     |-- newsinlevels_level2.csv
     
-    For News2meme, you only need the csv files. If you wish, you can download the original meme images and the images used in each news article from the following two links:
-        Meme images:
-        News articles images:
+    For News2meme, you don't actually need the images from the articles, but I included in the package as it might be useful for someone playing with the small dataset :)
 
 ### Configuration
 
