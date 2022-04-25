@@ -23,10 +23,10 @@ conda activate <name>
 
 Where you can replace `<name>` with whatever name you want.
 
-3. Download everything:
+3. Download everything: TODO
 
     This script will download the following things in the folder `~/data/news2meme`:
-    - The `glove.840B.300d.txt` pre-trained word embeddings.
+    - The `glove.42B.300d.txt` pre-trained word embeddings.
     - The news2meme dataset, with the following structure and content:
     
             |-- news2meme
@@ -59,19 +59,19 @@ You can generate memes in three different ways:
 
 1. Free mode: Put your news article in a .txt file and modify the `experiments/gen_single.yaml` file with the path of the file in the `TEXT` field. Then, run the following:
 
-    `python memegenerator.py --config=experiments/gen_single.yaml`
+    `python news2meme.py --config=experiments/gen_single.yaml`
 
 2. Specific mode: Define the news article ID in the `experiments/gen_id.yaml` file in the `NEWS_ID` field. Then, run the following:
 
-    `python memegenerator.py --config=experiments/gen_id.yaml`
+    `python news2meme.py --config=experiments/gen_id.yaml`
     
 3. Random mode: Generate a meme for a randomly sampled news article. Run the following:
-    `python memegenerator.py --config=experiments/gen_random.yaml`
+    `python news2meme.py --config=experiments/gen_random.yaml`
     
 4. Full mode: Generate a meme for each news article in the database. Run the following:
-    `python memegenerator.py --config=experiments/gen_all.yaml`
+    `python news2meme.py --config=experiments/gen_all.yaml`
 
-The memegenerator will place a pickle file with the retrieved meme image and catchphrase id in the path specified by `OUTPUT_PATH` in `settings.py`.
+The news2meme will place a pickle file with the retrieved meme image and catchphrase id in the path specified by `OUTPUT_PATH` in `settings.py`.
 
 ## Visualization:
 

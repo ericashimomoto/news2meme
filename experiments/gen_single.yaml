@@ -1,0 +1,4 @@
+MODE: "GEN"
+GEN_MODE: "FREE"
+TEXT: "sample/news.txt"
+CRATIO: 0.8
