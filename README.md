@@ -23,6 +23,8 @@ conda activate <name>
 
 Where you can replace `<name>` with whatever name you want.
 
+- Only got to test this code on Mac. It should run with not much trouble on Linux. I have no idea if it will run properly on Windows (sorry!).
+
 3. Download everything:
 
     This script will download the following things in the folder `~/data/news2meme`:
@@ -49,7 +51,7 @@ If you changed the download folder, make sure to change the path in settings.py
 
 To be able to generate the memes, you first need to compute the subspaces for each meme image and each catchphrase in the dataset. To do this, run the following:
 
-    `python memegenerator.py --config=experiments/train.yaml`
+    `python news2meme.py --config=experiments/train.yaml`
 
 This code will save all the subspaces into the `OUTPUT_PATH` defined in `settings.py`. I set the contribution ratio to define the subspace dimensions to `0.5`, but feel free to change this value in the yaml file to see how it changes the results.
 
