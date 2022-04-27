@@ -3,7 +3,7 @@
 This is the repository with the code for the paper "News2meme: An Automatic Content Generator from News Based on Word Subspaces from Text and Image".
 
 Small notes:
-- The work presented on the paper was obtained with a Matlab code which I cannot run anymore because I do not have Matlab's license anymore. Therefore, I re-wrote everything in Python and I hope this change makes the project more accessible (even though it has been over three years since I published this paper ^^")
+- The work presented on the paper was obtained with a Matlab code which I cannot run because I do not have Matlab's license anymore. Therefore, I re-wrote everything in Python and I hope this change makes the project more accessible (even though it has been over three years since I published this paper ^^")
 
 - In the original code, I used pre-trained word2vec embeddings. However, in this repo, I opted for using pre-trained GLoVe just because it was a bit easier for me to work. I expect the results to be pretty similar for both.
 
@@ -23,7 +23,7 @@ conda activate <name>
 
 Where you can replace `<name>` with whatever name you want.
 
-3. Download everything: TODO
+3. Download everything:
 
     This script will download the following things in the folder `~/data/news2meme`:
     - The `glove.42B.300d.txt` pre-trained word embeddings.
@@ -51,7 +51,7 @@ To be able to generate the memes, you first need to compute the subspaces for ea
 
     `python memegenerator.py --config=experiments/train.yaml`
 
-This code will save all the subspaces into the `OUTPUT_PATH` defined in `settings.py`.
+This code will save all the subspaces into the `OUTPUT_PATH` defined in `settings.py`. I set the contribution ratio to define the subspace dimensions to `0.5`, but feel free to change this value in the yaml file to see how it changes the results.
 
 ## Generation Mode
 
@@ -71,7 +71,7 @@ You can generate memes in three different ways:
 4. Full mode: Generate a meme for each news article in the database. Run the following:
     `python news2meme.py --config=experiments/gen_all.yaml`
 
-The news2meme will place a pickle file with the retrieved meme image and catchphrase id in the path specified by `OUTPUT_PATH` in `settings.py`.
+The news2meme will place a pickle file with the retrieved meme image and catchphrase id in the path specified by `OUTPUT_PATH` in `settings.py`. Again, I set the contribution ratio to be `0.8`, but feel free to change this value in the respective yaml files to see how it changes the results.
 
 ## Visualization
 
